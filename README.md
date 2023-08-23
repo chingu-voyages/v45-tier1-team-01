@@ -2,7 +2,8 @@ Steps to get the project running:
 1. `git clone https://github.com/chingu-voyages/v45-tier1-team-01.git`
 2. `cd 45-tier1-team-01`
 3. `cd meteorhub`
-4. `npm run dev`
+4. `npm install`
+5. `npm run dev`
 
 Make sure that your system has `npm` and `nodejs` installed
 --------------------------------------------------------------------
