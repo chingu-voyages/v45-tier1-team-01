@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./SearchComponent.css";
+import SummaryMetric from "./SummaryMetric";
 import DataDisplayTable from "./DataDisplayTable";
 
 export default function SearchComponent() {
@@ -35,6 +36,7 @@ export default function SearchComponent() {
       <button className="clear" onClick={(e) => setQuery("")}>
         Clear
       </button>
+      <SummaryMetric filteredData={filteredData} />
       <div id="data-display-table">
         {filteredData.map((meteorData, id) => (
           <DataDisplayTable
