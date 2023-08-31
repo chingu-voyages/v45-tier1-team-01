@@ -32,7 +32,7 @@ export default function Histogram({ filteredData }) {
         border: "2px solid red",
         padding: "15px",
         marginTop: "30px",
-        alignItems: "flex-end"
+        alignItems: "flex-end",
       }}
     >
       {!!arr &&

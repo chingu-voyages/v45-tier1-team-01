@@ -36,7 +36,7 @@ export default function SummaryMetric({ filteredData }) {
         <p>Strikens : {totalNumberOfStrikes}</p>
         <p>Total Mass : {totalMass}</p>
       </div>
-      <Histogram filteredData={filteredData}/>
+      <Histogram filteredData={filteredData} />
     </>
   );
 }
