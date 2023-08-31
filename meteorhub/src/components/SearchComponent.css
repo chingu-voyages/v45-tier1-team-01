@@ -1,0 +1,12 @@
+#search-bar {
+  font-size: 1rem;
+  padding: 0.5rem 0.4rem;
+  min-width: 18rem;
+  margin: 1rem;
+}
+
+#data-display-table {
+  border: 1px solid whitesmoke;
+  max-height: 80vh;
+  overflow-y: scroll;
+}

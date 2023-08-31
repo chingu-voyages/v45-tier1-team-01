@@ -1,0 +1,40 @@
+.data-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid whitesmoke;
+  align-items: center;
+}
+
+.data-row:hover {
+  background-color: #00000022;
+  cursor: pointer;
+}
+
+.data-row:active {
+  background-color: #00000055;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.58rem;
+}
+
+.meteor-name {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.meteor-recclass {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.left {
+  text-align: left;
+}
+
+.right {
+  text-align: right;
+}
