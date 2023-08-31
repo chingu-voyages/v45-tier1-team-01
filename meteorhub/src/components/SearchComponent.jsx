@@ -26,25 +26,20 @@ export default function SearchComponent() {
   }, [data, query]);
   return (
     <>
-      <input
-        id="search-bar"
-        type="text"
-        placeholder="Search"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-      />
-      <div id="data-display-table">
-        {filteredData.map((meteorData, id) => (
-          <DataDisplayTable
-            key={id}
-            id={id}
-            name={meteorData.name}
-            mass={meteorData.mass}
-            recclass={meteorData.recclass}
-            year={meteorData.year}
-          />
-        ))}
-      </div>
-    </>
-  );
+        <input type="text" placeholder="Search" value={query} onChange={e => setQuery(e.target.value)} />
+        <button className="clear" onClick={e => setQuery('')}>Clear</button>
+        <div id="data-display-table">
+          {filteredData.map((meteorData, id) => (
+            <DataDisplayTable
+              key={id}
+              id={id}
+              name={meteorData.name}
+              mass={meteorData.mass}
+              recclass={meteorData.recclass}
+              year={meteorData.year}
+            />
+          ))}
+        </div>
+      </>
+    )
 }
