@@ -1,4 +1,4 @@
-[
+export default [
     {
         "name": "Aachen",
         "id": "1",

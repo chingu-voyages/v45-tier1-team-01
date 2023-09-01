@@ -1,9 +1,9 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import SearchComponent from "./components/SearchComponent";
+import data from "./assets/data"
 
 function App() {
-  const [data, setData] = useState([]);
   const [query, setQuery] = useState("");
   const [filteredData, setFilteredData] = useState([]);
 
@@ -15,15 +15,6 @@ function App() {
     setQuery("");
   }
 
-  useEffect(() => {
-    fetch("./src/assets/data.json")
-      .then((response) => response.json())
-      .then((jsonData) => {
-        setData(jsonData);
-        setFilteredData(jsonData);
-      })
-      .catch((error) => console.error("Error fetching data:", error));
-  }, []);
   useEffect(() => {
     const filteredResults = data.filter(
       (item) =>
