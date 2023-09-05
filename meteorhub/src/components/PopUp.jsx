@@ -1,21 +1,24 @@
+import "./PopUp.css";
 export default function PopUp() {
   return (
-    <aside id="pop-up-card">
-      <span id="meteor-name"></span>
-      <span className="meteor-prop">
+    <aside id="overlay">
+      <div id="pop-up-card">
+        <span id="meteor-name"></span>
+        <span className="meteor-prop">
+          <span className="the-prop"></span>
+          <span className="the-value"></span>
+        </span>
+        <span className="meteor-prop">
+          <span className="the-prop"></span>
+          <span className="the-value"></span>
+        </span>
+        <span className="meteor-prop">
+          <span className="the-prop"></span>
+          <span className="the-value"></span>
+        </span>
         <span className="the-prop"></span>
-        <span className="the-value"></span>
-      </span>
-      <span className="meteor-prop">
-        <span className="the-prop"></span>
-        <span className="the-value"></span>
-      </span>
-      <span className="meteor-prop">
-        <span className="the-prop"></span>
-        <span className="the-value"></span>
-      </span>
-      <span className="the-prop"></span>
-      <progress></progress>
+        <progress></progress>
+      </div>
     </aside>
   );
 }
