@@ -3,7 +3,10 @@ export default function PopUp() {
   return (
     <aside id="overlay">
       <div id="pop-up-card">
-        <span id="meteor-name"></span>
+        <span>
+          <span id="meteor-name"></span>
+          <button>X</button>
+        </span>
         <span className="meteor-prop">
           <span className="the-prop"></span>
           <span className="the-value"></span>
