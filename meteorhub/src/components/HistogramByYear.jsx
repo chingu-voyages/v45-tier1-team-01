@@ -1,4 +1,4 @@
-export default function Histogram({ filteredData }) {
+export default function HistogramByYear({ filteredData }) {
   let arr = [];
   let max = 0;
   filteredData[0] && createHistogramData();
