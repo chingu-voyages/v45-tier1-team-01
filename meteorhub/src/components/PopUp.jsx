@@ -1,3 +1,21 @@
 export default function PopUp() {
-  return <div></div>;
+  return (
+    <aside id="pop-up-card">
+      <span></span>
+      <span>
+        <span></span>
+        <span></span>
+      </span>
+      <span>
+        <span></span>
+        <span></span>
+      </span>
+      <span>
+        <span></span>
+        <span></span>
+      </span>
+      <span></span>
+      <progress></progress>
+    </aside>
+  );
 }
