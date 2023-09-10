@@ -1,11 +1,12 @@
+import { useState } from "react";
 import "./PopUp.css";
-export default function PopUp() {
+export default function PopUp({ name, recclass, mass, year, popUpState, hidePopUp }) {
   return (
-    <aside id="overlay">
+    <aside id="overlay" style={{ display: popUpState }}>
       <div id="pop-up-card">
         <span className="meteor-prop biggie">
-          <span id="meteor-name">Abee</span>
-          <button>X</button>
+          <span id="meteor-name">{name}</span>
+          <button onClick={hidePopUp}>X</button>
         </span>
         <span>
           <span className="meteor-prop">
@@ -16,15 +17,15 @@ export default function PopUp() {
           </span>
           <span className="meteor-prop">
             <span className="the-prop">Class:</span>
-            <span className="the-value">EH4</span>
+            <span className="the-value">{recclass}</span>
           </span>
           <span className="meteor-prop">
             <span className="the-prop">Mass:</span>
-            <span className="the-value">107000 MT</span>
+            <span className="the-value">{mass} MT</span>
           </span>
           <span className="meteor-prop">
-            <span className="the-prop">Year</span>
-            <span className="the-value">1952</span>
+            <span className="the-prop">Year:</span>
+            <span className="the-value">{year}</span>
           </span>
         </span>
       </div>
