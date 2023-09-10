@@ -6,7 +6,6 @@ import data from "./assets/data";
 function App() {
   const [query, setQuery] = useState("");
   const [filteredData, setFilteredData] = useState([]);
-  const [popUpStatus, setPopUpStatus] = useState(false);
 
   function onChangeHandler(e) {
     setQuery(e.target.value);
@@ -14,10 +13,6 @@ function App() {
 
   function onClickHandler(e) {
     setQuery("");
-  }
-
-  function popUpStatusHandler(e) {
-    setPopUpStatus(!popUpStatus);
   }
 
   useEffect(() => {
@@ -33,10 +28,8 @@ function App() {
     <SearchComponent
       query={query}
       filteredData={filteredData}
-      popUpStatus={popUpStatus}
       onChangeHandler={onChangeHandler}
       onClickHandler={onClickHandler}
-      popUpStatusHandler={popUpStatusHandler}
     />
   );
 }
