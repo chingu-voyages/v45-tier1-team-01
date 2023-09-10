@@ -1,7 +1,7 @@
 #overlay {
-  background-color: #00000011;
-  /* backdrop-filter: blur(1rem);
-  -webkit-backdrop-filter: blur(1rem); */
+  background-color: #00000077;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
   position: fixed;
   top: 0;
   bottom: 0;
@@ -14,6 +14,7 @@
   justify-content: center;
   align-items: center;
   cursor: default;
+  z-index: 10;
 }
 
 #pop-up-card {
@@ -25,12 +26,13 @@
   width: fit-content;
   color: whitesmoke;
   width: 350px;
-  height: 500px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: space-between;
   padding: 0.5rem;
+  z-index: 15;
 }
 
 .meteor-prop {
