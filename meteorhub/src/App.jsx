@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useState, useEffect } from "react";
 import SearchComponent from "./components/SearchComponent";
-import data from "./assets/data"
+import data from "./assets/data";
 
 function App() {
   const [query, setQuery] = useState("");

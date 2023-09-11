@@ -29,7 +29,6 @@ export default function SearchComponent({
       <button className="clear" onClick={(e) => onClickHandler(e)}>
         Clear
       </button>
-      <SummaryMetric filteredData={filteredData} />
       <div id="data-display-table">
         {filteredData.map((meteorData, id) => (
           <DataDisplayTable
@@ -42,6 +41,7 @@ export default function SearchComponent({
           />
         ))}
       </div>
+      <SummaryMetric filteredData={filteredData} />
     </>
   );
 }

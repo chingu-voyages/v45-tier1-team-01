@@ -1,0 +1,65 @@
+#overlay {
+  background-color: #00000077;
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  z-index: 10;
+}
+
+#pop-up-card {
+  background-color: #242424;
+  border: 1px solid whitesmoke;
+  border-radius: 2rem;
+  min-width: 320px;
+  max-width: 650px;
+  width: fit-content;
+  color: whitesmoke;
+  width: 350px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 0.5rem;
+  z-index: 15;
+}
+
+.meteor-prop {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 0.5rem 0.5rem;
+}
+
+.biggie {
+  padding: 0.8rem;
+  align-items: center;
+}
+
+.biggie button {
+  width: fit-content;
+  height: fit-content;
+  border-radius: 3rem;
+}
+
+#meteor-name {
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+
+.the-prop {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
