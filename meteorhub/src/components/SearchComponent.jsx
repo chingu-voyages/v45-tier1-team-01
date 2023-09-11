@@ -24,9 +24,9 @@ export default function SearchComponent({
         value={query}
         onChange={(e) => onChangeHandler(e)}
       />
-      <button onClick={(e) => toggleFilterModal()}>Filter by Range</button>
+      <button className="button" onClick={(e) => toggleFilterModal()}>Filter</button>
       {openFilterModal ? <FilterRangeComponent toggleFilterModal={toggleFilterModal} updateRange={updateRange}/> : null}
-      <button className="clear" onClick={(e) => onClickHandler(e)}>
+      <button className="button" onClick={(e) => onClickHandler(e)}>
         Clear
       </button>
       <div id="data-display-table">
