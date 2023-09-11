@@ -32,11 +32,12 @@ function App() {
   },[])
 
   useEffect(() => {  
+    const trimmedQuery = query.trim();
     const filteredResults = data.filter(
       (item) =>
-        item.name.toLowerCase().includes(query.toLowerCase()) ||
-        item.year.toLowerCase().includes(query.toLowerCase()) ||
-        item.recclass.toLowerCase().includes(query.toLowerCase()) 
+        item.name.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
+        item.year.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
+        item.recclass.toLowerCase().includes(trimmedQuery.toLowerCase())
     );
     setFilteredData(filteredResults);
   }, [data, query]);
