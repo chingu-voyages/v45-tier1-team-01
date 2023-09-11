@@ -1,37 +1,63 @@
-Steps to get the project running:
-1. `git clone https://github.com/chingu-voyages/v45-tier1-team-01.git`
-2. `cd 45-tier1-team-01`
-3. `cd meteorhub`
-4. `npm install`
-5. `npm run dev`
+# ☄️ Meteorhub
 
-Make sure that your system has `npm` and `nodejs` installed
---------------------------------------------------------------------
-# voyage-tasks
+## Overview
 
-Your project's `readme` is as important to success as your code. For 
-this reason you should put as much care into its creation and maintenance
-as you would any other component of the application.
+This app was created for the Chingu Voyage 45. It uses data from the
+[NASA Meteor Landing API](https://data.nasa.gov/resource/gh4g-9sfh.json) and presents it in an engaging and user-friendly manner, making it both informative and enjoyable!!
 
-If you are unsure of what should go into the `readme` let this article,
-written by an experienced Chingu, be your starting point - 
-[Keys to a well written README](https://tinyurl.com/yk3wubft).
+#### LIVE LINK : https://meteorhub.netlify.app/
 
-And before we go there's "one more thing"! Once you decide what to include
-in your `readme` feel free to replace the text we've provided here.
+## 🚀 Getting Started
 
-> Own it & Make it your Own!
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-## Team Documents
+### 🧾 Prerequisites
 
-You may find these helpful as you work together to organize your project.
+Before starting, you need to install the following on your computer.
 
-- [Team Project Ideas](./docs/team_project_ideas.md)
-- [Team Decision Log](./docs/team_decision_log.md)
+[![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)](https://nodejs.org/en/download/)
 
-Meeting Agenda templates (located in the `/docs` directory in this repo):
+[![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/downloads)
 
-- Meeting - Voyage Kickoff --> ./docs/meeting-voyage_kickoff.docx
-- Meeting - App Vision & Feature Planning --> ./docs/meeting-vision_and_feature_planning.docx
-- Meeting - Sprint Retrospective, Review, and Planning --> ./docs/meeting-sprint_retrospective_review_and_planning.docx
-- Meeting - Sprint Open Topic Session --> ./docs/meeting-sprint_open_topic_session.docx
+[![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white)](https://www.npmjs.com/)
+
+### 🛠️ Installation
+
+1. Clone the repository `git clone https://github.com/chingu-voyages/v45-tier1-team-01.git`
+2. Run `cd 45-tier1-team-01/meteorhub` to change the working directory
+3. Run `npm i` or `npm install` to install all dependencies
+4. Run `npm run dev` to start the application
+5. Visit [http://localhost:3000](http://localhost:3000) to view the application
+
+## 📒 Features
+
+**Note**: Instead of fetching the data from [NASA Meteor landing API](https://data.nasa.gov/resource/gh4g-9sfh.json), we created a file `data.js` in `src/assets/data.js` which contains all the fetched data. Since, at the time of making this project the data pulled from the API is static and not changing.
+
+
+- The search field lets the user search data on the bases of:
+
+    - Name
+    - Year of strike
+    - Meteorite composition (`recclass`)
+    - Mass range (e.g. low to high, inclusive)
+
+- Clicking on the clear button will clear the input field as well as update the DOM to show all the meteor landings.
+
+- The data is displayed in the form of a scrollable table. Each row shows data about a particular meteor landing. When a specific meteor landing is clicked it brings up a pop-up containing more details about the meteor landing.
+
+- Clicking on the Geolocation coordinates of any particular meteor landing launches Google Maps to display the
+  geolocation.
+
+- All the data is summarized in the Summary Metric. Summary Metric displays the following metrics for the data that has been selected:
+
+    - Total number of strikes
+    - Average mass
+    - Histogram showing the number of strikes by year
+    - Histogram showing the number of strikes by meteorite composition (`recclass`).
+
+ ( **If no search criteria have been selected then the summary metrics will be for all meteorite strikes.** )
+ 
+
+## ✨ All the awesome contributors
+
+<img src="https://contrib.rocks/image?repo=chingu-voyages/v45-tier1-team-01"/>
