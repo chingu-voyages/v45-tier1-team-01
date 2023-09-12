@@ -1,8 +1,15 @@
-#search-bar {
-  font-size: 1rem;
-  padding: 0.5rem 0.4rem;
-  min-width: 18rem;
-  margin: 1rem;
+#search-wrapper {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0em;
+}
+
+#searchbar {
+  height: 2.5em;
+  border-radius: 5px;
+  text-align: center;
+  width: 30em;
 }
 
 #data-display-table {
@@ -14,6 +21,24 @@
 .button {
   margin: 1em;
   padding: 0.5em;
+}
+
+#selectedRangeTag {
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 5px;
+  display: flex;
+  height: 2.5em;  
+  padding: 0em 1em; 
+}
+
+#selectedRangeTag button {
+    background: silver;
+    border-radius: 50%;
+    color: white;
+    display: inline-block; 
+    margin-left: 1em;
+    padding: revert;    
 }
 
 .popup {  
@@ -67,61 +92,6 @@ input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-
-
-/*.slider {
-  background: white;
-  border-radius: 5px;  
-  height: 5px;
-  margin: 1em 3.5em;
-  position: relative;    
-}
-
-.progress {
-  background: blue;
-  height: 5px;
-  position: absolute;
-  width: 100%;
-}
-
-.slider-wrapper {
-  display: flex;
-  margin: auto;
-  position: relative;
-  width: 80%;
-}
-
-input[type="range"] {
-  background: transparent;
-  height: 5px;
-  position: absolute;
-  top: -23px;
-  width: 51%;
-  -webkit-appearance: none;
-}
-
-input[type="range"]:last-child{
-  left: 50%;
-}
-
-input[type=range]::-webkit-slider-thumb {
-  background: blue;
-  border-radius: 50%;
-  height: 20px;
-  pointer-events: auto;
-  width: 20px;
-  -webkit-appearance: none;
-}
-
-input[type="range"]::-moz-range-thumb {
-  background: blue;
-  border: none;
-  border-radius: 50%;
-  height: 20px;
-  pointer-events: auto;
-  width: 20px;
-  -moz-appearance: none;
-}*/
 
 .apply-btn {
   align-self: center;

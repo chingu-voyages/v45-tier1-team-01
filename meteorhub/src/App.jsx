@@ -1,7 +1,9 @@
 import "./App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext, createContext } from "react";
 import SearchComponent from "./components/SearchComponent";
 import data from "./assets/data";
+
+export const FilterRangeContext = createContext(null);
 
 function App() {
   const [query, setQuery] = useState("");
@@ -51,6 +53,7 @@ function App() {
   },[data, minMass, maxMass]);
 
   return (
+    <FilterRangeContext.Provider value={{minMass, maxMass}}>
     <SearchComponent
       query={query}
       filteredData={filteredData}
@@ -58,6 +61,7 @@ function App() {
       onClickHandler={onClickHandler}
       updateRange={updateRange}
     />
+    </FilterRangeContext.Provider>
   );
 }
 

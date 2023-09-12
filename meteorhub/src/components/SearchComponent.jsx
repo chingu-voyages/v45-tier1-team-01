@@ -3,6 +3,7 @@ import "./SearchComponent.css";
 import SummaryMetric from "./SummaryMetric";
 import DataDisplayTable from "./DataDisplayTable";
 import FilterRangeComponent from "./FilterRangeComponent";
+import FilterTag from "./FilterTag";
 
 export default function SearchComponent({
   query,
@@ -12,23 +13,39 @@ export default function SearchComponent({
   updateRange
 }) {
   const [openFilterModal, setOpenFilterModal] = useState(false);
+  const [showRangeTag, setShowRangeTag] = useState(false)
 
-  function toggleFilterModal(e) {
+  function toggleFilterModal() {
     setOpenFilterModal(!openFilterModal);
+  }
+
+  function toggleRangeTag() {
+    setShowRangeTag(!showRangeTag);
   }
   return (
     <>
-      <input
-        type="text"
-        placeholder="Search"
-        value={query}
-        onChange={(e) => onChangeHandler(e)}
-      />
-      <button className="button" onClick={(e) => toggleFilterModal()}>Filter</button>
-      {openFilterModal ? <FilterRangeComponent toggleFilterModal={toggleFilterModal} updateRange={updateRange}/> : null}
-      <button className="button" onClick={(e) => onClickHandler(e)}>
-        Clear
-      </button>
+    <div id="search-wrapper">
+        <input
+          type="text"
+          id="searchbar"
+          placeholder="Search"
+          value={query}
+          onChange={(e) => onChangeHandler(e)}
+        />
+        <button className="button" onClick={(e) => toggleFilterModal()}>Filter</button>
+        {openFilterModal ? 
+          <FilterRangeComponent 
+            updateRange={updateRange}
+            toggleFilterModal={toggleFilterModal}             
+            toggleRangeTag={toggleRangeTag}/> 
+          : null}
+        {showRangeTag ? 
+          <FilterTag/>
+          : null}
+        <button className="button" onClick={(e) => onClickHandler(e)}>
+          Clear
+        </button>
+      </div>
       <div id="data-display-table">
         {filteredData.map((meteorData, id) => (
           <DataDisplayTable
