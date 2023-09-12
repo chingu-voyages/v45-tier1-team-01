@@ -17,10 +17,6 @@ function App() {
     setQuery(e.target.value);
   }
 
-  function onClickHandler(e) {
-    setQuery("");
-  }
-
   function updateRange(minValue, maxValue) {
     minValue === "" ? minMass : setMinMass(parseInt(minValue));
     maxValue === "" ? maxMass : setMaxMass(parseInt(maxValue));
@@ -73,7 +69,6 @@ function App() {
       query={query}
       filteredData={filteredData}
       onChangeHandler={onChangeHandler}
-      onClickHandler={onClickHandler}
       updateRange={updateRange}
       minMass={minMass}
       maxMass={maxMass}
