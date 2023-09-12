@@ -1,13 +1,19 @@
-import { useContext } from "react";
-import { FilterRangeContext } from "../App";
 import "./SearchComponent.css";
 
-export default function FilterTag({}){
-    const selectedMassRange = useContext(FilterRangeContext);
+export default function FilterTag({
+    minMass,
+    maxMass,
+    toggleRangeTag,
+    resetFilter}){
+    
+    function clickHandler() {
+        resetFilter();
+        toggleRangeTag();
+    }
     return (
         <div id="selectedRangeTag">
-            <p>{selectedMassRange.minMass} - {selectedMassRange.maxMass}</p>
-            <button>x</button>
+            <p>{minMass} - {maxMass}</p>
+            <button onClick={() => clickHandler()}>x</button>
         </div> 
     )
 }

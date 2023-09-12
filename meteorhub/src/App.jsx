@@ -1,15 +1,17 @@
 import "./App.css";
-import React, { useState, useEffect, useContext, createContext } from "react";
+import React, { useState, useEffect} from "react";
 import SearchComponent from "./components/SearchComponent";
 import data from "./assets/data";
-
-export const FilterRangeContext = createContext(null);
 
 function App() {
   const [query, setQuery] = useState("");
   const [filteredData, setFilteredData] = useState([]);
   const [minMass, setMinMass] = useState(0);
   const [maxMass, setMaxMass] = useState(0);
+  const [initialRange, setInitialRange] = useState({
+    minRange: 0,
+    maxRange: 0
+  })
   
   function onChangeHandler(e) {
     setQuery(e.target.value);
@@ -24,6 +26,18 @@ function App() {
     maxValue === "" ? maxMass : setMaxMass(parseInt(maxValue));
   }
 
+  function updateInitialRange(minValue, maxValue) {
+    setInitialRange({
+      minRange: minValue,
+      maxRange: maxValue
+    })
+  }
+
+  function resetFilter() {
+    setMinMass(initialRange.minRange);
+    setMaxMass(initialRange.maxRange)
+  }
+
   useEffect(() => {
     const minInitialMass = data.reduce((prev, curr) => {
       return parseInt(curr?.mass) < parseInt(prev.mass) ? curr : prev}). mass;
@@ -31,6 +45,7 @@ function App() {
       return parseInt(prev?.mass) > parseInt(curr.mass) ? prev : curr}). mass;
     setMinMass(parseInt(minInitialMass));
     setMaxMass(parseInt(maxInitialMass));
+    updateInitialRange(minInitialMass, maxInitialMass);
   },[])
 
   useEffect(() => {  
@@ -53,15 +68,18 @@ function App() {
   },[data, minMass, maxMass]);
 
   return (
-    <FilterRangeContext.Provider value={{minMass, maxMass}}>
+    
     <SearchComponent
       query={query}
       filteredData={filteredData}
       onChangeHandler={onChangeHandler}
       onClickHandler={onClickHandler}
       updateRange={updateRange}
+      minMass={minMass}
+      maxMass={maxMass}
+      resetFilter={resetFilter}
     />
-    </FilterRangeContext.Provider>
+    
   );
 }
 

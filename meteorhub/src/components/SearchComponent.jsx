@@ -10,7 +10,10 @@ export default function SearchComponent({
   filteredData,
   onChangeHandler,
   onClickHandler,
-  updateRange
+  updateRange,
+  minMass,
+  maxMass,
+  resetFilter
 }) {
   const [openFilterModal, setOpenFilterModal] = useState(false);
   const [showRangeTag, setShowRangeTag] = useState(false)
@@ -40,7 +43,11 @@ export default function SearchComponent({
             toggleRangeTag={toggleRangeTag}/> 
           : null}
         {showRangeTag ? 
-          <FilterTag/>
+          <FilterTag 
+            minMass={minMass}
+            maxMass={maxMass}
+            toggleRangeTag={toggleRangeTag}
+            resetFilter={resetFilter}/>
           : null}
         <button className="button" onClick={(e) => onClickHandler(e)}>
           Clear
