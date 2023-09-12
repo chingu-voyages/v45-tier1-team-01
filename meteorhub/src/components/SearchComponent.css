@@ -32,6 +32,10 @@
   padding: 0em 1em; 
 }
 
+#selectedRangeTag p {
+  font-weight: 500;
+}
+
 #selectedRangeTag button {
     background: silver;
     border-radius: 50%;
