@@ -9,7 +9,6 @@ export default function SearchComponent({
   query,
   filteredData,
   onChangeHandler,
-  onClickHandler,
   updateRange,
   minMass,
   maxMass,
@@ -29,7 +28,7 @@ export default function SearchComponent({
     <>
     <div id="search-wrapper">
         <input
-          type="text"
+          type="search"
           id="searchbar"
           placeholder="Search"
           value={query}
@@ -49,9 +48,6 @@ export default function SearchComponent({
             toggleRangeTag={toggleRangeTag}
             resetFilter={resetFilter}/>
           : null}
-        <button className="button" onClick={(e) => onClickHandler(e)}>
-          Clear
-        </button>
       </div>
       <div id="data-display-table">
         {filteredData.map((meteorData, id) => (
