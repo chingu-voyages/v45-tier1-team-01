@@ -49,20 +49,13 @@ function App() {
     const trimmedQuery = query.trim();
     const filteredResults = data.filter(
       (item) =>
-        item.name.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
+        (parseInt(item.mass) >= minMass && parseInt(item.mass) <= maxMass) &&
+        (item.name.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
         item.year.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
-        item.recclass.toLowerCase().includes(trimmedQuery.toLowerCase())
+        item.recclass.toLowerCase().includes(trimmedQuery.toLowerCase()))
     );
     setFilteredData(filteredResults);
-  }, [data, query]);
-
-  useEffect(() => {
-    const filteredResults = data.filter(
-      (item) => 
-        (parseInt(item.mass) >= minMass) && (parseInt(item.mass) <= maxMass) 
-    );
-    setFilteredData(filteredResults);    
-  },[data, minMass, maxMass]);
+  }, [data, minMass, maxMass, query]);
 
   return (
     <>
