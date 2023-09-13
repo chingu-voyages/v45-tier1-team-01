@@ -2,8 +2,9 @@ import { useState, useRef } from "react";
 import "./SearchComponent.css";
 
 export default function FilterRangeComponent({
+    updateRange,
     toggleFilterModal,
-    updateRange
+    toggleRangeTag
 }) {
     const minRangeRef = useRef(null);
     const maxRangeRef = useRef(null);
@@ -11,6 +12,7 @@ export default function FilterRangeComponent({
     function clickHandler() {
         updateRange(minRangeRef.current.value, maxRangeRef.current.value);
         toggleFilterModal();
+        toggleRangeTag();
     }
 
     return (
