@@ -2,6 +2,7 @@ import "./App.css";
 import React, { useState, useEffect } from "react";
 import SearchComponent from "./components/SearchComponent";
 import data from "./assets/data";
+import Footer from "./components/Footer"
 
 function App() {
   const [query, setQuery] = useState("");
@@ -50,13 +51,16 @@ function App() {
   },[data, minMass, maxMass]);
 
   return (
-    <SearchComponent
-      query={query}
-      filteredData={filteredData}
-      onChangeHandler={onChangeHandler}
-      onClickHandler={onClickHandler}
-      updateRange={updateRange}
-    />
+    <>
+      <SearchComponent
+        query={query}
+        filteredData={filteredData}
+        onChangeHandler={onChangeHandler}
+        onClickHandler={onClickHandler}
+        updateRange={updateRange}
+      />
+      <Footer />
+    </>
   );
 }
 
