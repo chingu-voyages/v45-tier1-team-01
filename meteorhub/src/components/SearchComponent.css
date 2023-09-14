@@ -14,8 +14,6 @@
 
 #data-display-table {
   border: 1px solid whitesmoke;
-  max-height: 80vh;
-  overflow-y: scroll;
 }
 
 .button {
@@ -55,7 +53,8 @@
   opacity: 0.9;
   position: fixed;
   top: 0;
-  width: 100%;  
+  width: 100%;
+  z-index: 2;  
 }
 
 .popup-inner {
