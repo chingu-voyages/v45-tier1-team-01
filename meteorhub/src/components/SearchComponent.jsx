@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FixedSizeList } from "react-window";
 import "./SearchComponent.css";
 import SummaryMetric from "./SummaryMetric";
 import DataDisplayTable from "./DataDisplayTable";
@@ -24,6 +25,23 @@ export default function SearchComponent({
   function toggleRangeTag() {
     setShowRangeTag(!showRangeTag);
   }
+
+  const Row = ({ index, style }) => {
+    const meteorData = filteredData[index];
+
+    return (
+      <div style={style}>
+        <DataDisplayTable
+          id={index}
+          name={meteorData.name}
+          mass={meteorData.mass}
+          recclass={meteorData.recclass}
+          year={meteorData.year}
+        />
+      </div>
+    );
+  };
+
   return (
     <>
     <div id="search-wrapper">
@@ -50,16 +68,12 @@ export default function SearchComponent({
           : null}
       </div>
       <div id="data-display-table">
-        {filteredData.map((meteorData, id) => (
-          <DataDisplayTable
-            key={id}
-            id={id}
-            name={meteorData.name}
-            mass={meteorData.mass}
-            recclass={meteorData.recclass}
-            year={meteorData.year}
-          />
-        ))}
+        <FixedSizeList
+          height={360}
+          itemCount={filteredData.length}
+          itemSize={100}>
+            {Row}
+        </FixedSizeList>
       </div>
       <SummaryMetric filteredData={filteredData} />
     </>
