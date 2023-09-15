@@ -1,39 +1,19 @@
 export default function HistogramByReclass({ filteredData }) {
-  let arrWithIgnoredDuplicates = filteredData.map((ele) => ele.recclass);
+  const recclass = filteredData.map((ele) => ele.recclass);
+  const dict = {};
 
-  for (let i = 0; i < arrWithIgnoredDuplicates.length; i++) {
-    let instance = arrWithIgnoredDuplicates[i];
-    for (let j = i + 1; j < arrWithIgnoredDuplicates.length; j++) {
-      if (instance === arrWithIgnoredDuplicates[j]) {
-        arrWithIgnoredDuplicates[j] = "ignore";
-      }
-    }
+  for (let i = 0; i < recclass.length; i++) {
+    dict[recclass[i]] =
+      dict[recclass[i]] === undefined ? 1 : dict[recclass[i]] + 1;
   }
 
-  let arr = [];
-
-  for (let i = 0; i < arrWithIgnoredDuplicates.length; i++) {
-    if (arrWithIgnoredDuplicates[i] !== "ignore") {
-      arr.push(arrWithIgnoredDuplicates[i]);
-    }
-  }
-
-  for (let i = 0; i < arr.length; i++) {
-    let instance = arr[i];
-    let count = 0;
-    for (let j = 0; j < filteredData.length; j++) {
-      if (instance === filteredData[j].recclass) {
-        count++;
-      }
-    }
-    arr[i] = [instance, count];
-  }
+  const ansArr = Object.entries(dict);
 
   let max = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    if (max < arr[i][1]) {
-      max = arr[i][1];
+  for (let i = 0; i < ansArr.length; i++) {
+    if (max < ansArr[i][1]) {
+      max = ansArr[i][1];
     }
   }
 
@@ -47,11 +27,11 @@ export default function HistogramByReclass({ filteredData }) {
         padding: "15px",
         marginTop: "30px",
         alignItems: "flex-end",
-        marginBottom: "30px"
+        marginBottom: "30px",
       }}
     >
-      {!!arr &&
-        arr.map((ele) => {
+      {!!ansArr &&
+        ansArr.map((ele) => {
           return (
             <div key={ele[0]}>
               <div
