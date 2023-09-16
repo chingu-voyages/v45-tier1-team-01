@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import HistogramByYear from "./HistogramByYear";
 import HistogramByReclass from "./HistogramByReclass";
+import "./Histogram.css";
 
 export default function SummaryMetric({ filteredData }) {
   let [totalNumberOfStrikes, setTotalNumberOfStrikes] = useState(0);
