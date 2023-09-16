@@ -24,17 +24,7 @@ export default function HistogramByYear({ filteredData }) {
   }
 
   return (
-    <div
-      className="histogram"
-      style={{
-        display: "flex",
-        height: "300px",
-        border: "2px solid red",
-        padding: "15px",
-        marginTop: "30px",
-        alignItems: "flex-end",
-      }}
-    >
+    <div className="histogram" id="by-year">
       {!!arr &&
         arr.map((ele, index) => {
           if (ele > 0) {

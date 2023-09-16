@@ -3,8 +3,7 @@ export default function HistogramByReclass({ filteredData }) {
   const dict = {};
 
   for (let i = 0; i < recclass.length; i++) {
-    dict[recclass[i]] =
-      dict[recclass[i]] === undefined ? 1 : dict[recclass[i]] + 1;
+    dict[recclass[i]] = dict[recclass[i]] === undefined ? 1 : dict[recclass[i]] + 1;
   }
 
   const ansArr = Object.entries(dict);
@@ -18,18 +17,7 @@ export default function HistogramByReclass({ filteredData }) {
   }
 
   return (
-    <div
-      className="histogram"
-      style={{
-        display: "flex",
-        height: "300px",
-        border: "2px solid blue",
-        padding: "15px",
-        marginTop: "30px",
-        alignItems: "flex-end",
-        marginBottom: "30px",
-      }}
-    >
+    <div className="histogram" id="by-recclass">
       {!!ansArr &&
         ansArr.map((ele) => {
           return (
