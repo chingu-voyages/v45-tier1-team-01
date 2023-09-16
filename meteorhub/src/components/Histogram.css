@@ -1,0 +1,11 @@
+.histogram {
+  overflow-y: hidden;
+  display: flex;
+  height: 27vh;
+  width: 35vw;
+  border: 1px solid white;
+  padding: 1rem;
+  margin: 2rem auto !important;
+  align-items: flex-end;
+  padding: 1rem 1rem 4rem 1rem;
+}

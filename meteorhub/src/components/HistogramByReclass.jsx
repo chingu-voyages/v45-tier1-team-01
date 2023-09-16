@@ -17,19 +17,24 @@ export default function HistogramByReclass({ filteredData }) {
   }
 
   return (
-    <div className="histogram" id="by-recclass">
+    <div className="histogram">
       {!!ansArr &&
         ansArr.map((ele) => {
           return (
-            <div key={ele[0]}>
+            <div key={ele[0]} style={{ borderBottom: "1px solid black" }}>
               <div
                 style={{
-                  height: `${(300 * ele[1]) / max}px`,
+                  height: `${(200 * ele[1]) / max}px`,
                   border: "2px solid black",
+                  borderBottom: "none",
                   backgroundColor: "grey",
+                  width: "max-content",
+                  margin: "0 0.2rem",
                 }}
               >
-                {ele[0]},{ele[1]}
+                <p style={{}}>
+                  {ele[0]},{ele[1]}
+                </p>
               </div>
             </div>
           );

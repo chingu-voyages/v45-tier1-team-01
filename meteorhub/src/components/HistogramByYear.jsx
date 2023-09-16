@@ -24,20 +24,25 @@ export default function HistogramByYear({ filteredData }) {
   }
 
   return (
-    <div className="histogram" id="by-year">
+    <div className="histogram">
       {!!arr &&
         arr.map((ele, index) => {
           if (ele > 0) {
             return (
-              <div key={index + 861}>
+              <div key={index + 861} style={{ borderBottom: "2px solid black" }}>
                 <div
                   style={{
-                    height: `${(300 * ele) / max}px`,
+                    height: `${(200 * ele) / max}px`,
                     border: "2px solid black",
+                    borderBottom: "none",
                     backgroundColor: "grey",
+                    width: "max-content",
+                    margin: "0 0.2rem",
                   }}
                 >
-                  {index + 861},{ele}
+                  <p>
+                    {index + 861},{ele}
+                  </p>
                 </div>
               </div>
             );
