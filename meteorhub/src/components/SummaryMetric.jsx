@@ -24,7 +24,7 @@ export default function SummaryMetric({ filteredData }) {
   );
 
   return (
-    <>
+    <aside>
       <div
         className="summaryMetric"
         style={{
@@ -39,6 +39,6 @@ export default function SummaryMetric({ filteredData }) {
       </div>
       <HistogramByYear filteredData={filteredData} />
       <HistogramByReclass filteredData={filteredData} />
-    </>
+    </aside>
   );
 }
