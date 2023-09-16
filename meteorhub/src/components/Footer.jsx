@@ -2,7 +2,7 @@ import githubLogo from "../assets/githubMark.png";
 
 export default function Footer() {
   return (
-    <div
+    <footer
       style={{
         display: "flex",
         alignItems: "center",
@@ -18,13 +18,9 @@ export default function Footer() {
       <div>MeteorHub &copy; 2023</div>
       <div>
         <a href="https://github.com/chingu-voyages/v45-tier1-team-01" target="_blank">
-          <img
-            style={{ width: "60px", height: "60px" }}
-            src={githubLogo}
-            alt="Github Logo"
-          />
+          <img style={{ width: "60px", height: "60px" }} src={githubLogo} alt="Github Logo" />
         </a>
       </div>
-    </div>
+    </footer>
   );
 }
