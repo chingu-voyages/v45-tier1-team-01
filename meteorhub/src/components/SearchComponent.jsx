@@ -13,10 +13,10 @@ export default function SearchComponent({
   updateRange,
   minMass,
   maxMass,
-  resetFilter
+  resetFilter,
 }) {
   const [openFilterModal, setOpenFilterModal] = useState(false);
-  const [showRangeTag, setShowRangeTag] = useState(false)
+  const [showRangeTag, setShowRangeTag] = useState(false);
 
   function toggleFilterModal() {
     setOpenFilterModal(!openFilterModal);
@@ -44,37 +44,41 @@ export default function SearchComponent({
 
   return (
     <>
-    <div id="search-wrapper">
-        <input
-          type="search"
-          id="searchbar"
-          placeholder="Search"
-          value={query}
-          onChange={(e) => onChangeHandler(e)}
-        />
-        <button className="button" onClick={(e) => toggleFilterModal()}>Filter</button>
-        {openFilterModal ? 
-          <FilterRangeComponent 
-            updateRange={updateRange}
-            toggleFilterModal={toggleFilterModal}             
-            toggleRangeTag={toggleRangeTag}/> 
-          : null}
-        {showRangeTag ? 
-          <FilterTag 
-            minMass={minMass}
-            maxMass={maxMass}
-            toggleRangeTag={toggleRangeTag}
-            resetFilter={resetFilter}/>
-          : null}
-      </div>
-      <div id="data-display-table">
-        <FixedSizeList
-          height={360}
-          itemCount={filteredData.length}
-          itemSize={100}>
+      <main>
+        <h1>MeteorHub</h1>
+        <div id="search-wrapper">
+          <input
+            type="search"
+            id="searchbar"
+            placeholder="Search"
+            value={query}
+            onChange={(e) => onChangeHandler(e)}
+          />
+          <button className="button" onClick={(e) => toggleFilterModal()}>
+            Filter
+          </button>
+          {openFilterModal ? (
+            <FilterRangeComponent
+              updateRange={updateRange}
+              toggleFilterModal={toggleFilterModal}
+              toggleRangeTag={toggleRangeTag}
+            />
+          ) : null}
+          {showRangeTag ? (
+            <FilterTag
+              minMass={minMass}
+              maxMass={maxMass}
+              toggleRangeTag={toggleRangeTag}
+              resetFilter={resetFilter}
+            />
+          ) : null}
+        </div>
+        <div id="data-display-table">
+          <FixedSizeList height={360} itemCount={filteredData.length} itemSize={100}>
             {Row}
-        </FixedSizeList>
-      </div>
+          </FixedSizeList>
+        </div>
+      </main>
       <SummaryMetric filteredData={filteredData} />
     </>
   );
