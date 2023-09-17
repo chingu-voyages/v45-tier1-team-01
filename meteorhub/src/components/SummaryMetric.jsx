@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import HistogramByYear from "./HistogramByYear";
-import HistogramByReclass from "./HistogramByReclass";
+import "./SummaryMetric.css";
 
 export default function SummaryMetric({ filteredData }) {
   let [totalNumberOfStrikes, setTotalNumberOfStrikes] = useState(0);
@@ -24,21 +23,15 @@ export default function SummaryMetric({ filteredData }) {
   );
 
   return (
-    <>
-      <div
-        className="summaryMetric"
-        style={{
-          border: "1px solid whitesmoke",
-          width: "200px",
-          margin: "auto",
-          marginTop: "20px",
-        }}
-      >
-        <p>Strikens : {totalNumberOfStrikes}</p>
-        <p>Total Mass : {totalMass}</p>
-      </div>
-      <HistogramByYear filteredData={filteredData} />
-      <HistogramByReclass filteredData={filteredData} />
-    </>
+    <div className="summaryMetric">
+      <p className="total-val">
+        <span className="val-name">Total Strikes</span>
+        <span>{totalNumberOfStrikes}</span>
+      </p>
+      <p className="total-val">
+        <span className="val-name">Total Mass</span>
+        <span>{totalMass}</span>
+      </p>
+    </div>
   );
 }
