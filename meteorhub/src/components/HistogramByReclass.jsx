@@ -5,7 +5,8 @@ export default function HistogramByReclass({ filteredData }) {
   const dict = {};
 
   for (let i = 0; i < recclass.length; i++) {
-    dict[recclass[i]] = dict[recclass[i]] === undefined ? 1 : dict[recclass[i]] + 1;
+    dict[recclass[i]] =
+      dict[recclass[i]] === undefined ? 1 : dict[recclass[i]] + 1;
   }
 
   const ansArr = Object.entries(dict);
@@ -23,17 +24,16 @@ export default function HistogramByReclass({ filteredData }) {
       {!!ansArr &&
         ansArr.map((ele) => {
           return (
-            <div key={ele[0]} style={{ borderBottom: "1px solid black" }}>
+            <div key={ele[0]} className="histogram-wrapper">
               <div
                 className="histogram-bar"
                 style={{
                   height: `${(200 * ele[1]) / max}px`,
                 }}
-              >
-                <p style={{}}>
-                  {ele[0]},{ele[1]}
-                </p>
-              </div>
+              ></div>
+              <p style={{ width: "90px" }}>
+                {ele[0]} - {ele[1]}
+              </p>&nbsp;
             </div>
           );
         })}

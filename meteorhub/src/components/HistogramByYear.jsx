@@ -31,17 +31,18 @@ export default function HistogramByYear({ filteredData }) {
         arr.map((ele, index) => {
           if (ele > 0) {
             return (
-              <div key={index + 861} style={{ borderBottom: "2px solid black" }}>
+              <div key={index + 861}>
                 <div
                   className="histogram-bar"
                   style={{
                     height: `${(200 * ele) / max}px`,
+                    width: "65px",
+                    borderBottom: "1px solid black",
                   }}
-                >
-                  <p>
-                    {index + 861},{ele}
-                  </p>
-                </div>
+                ></div>
+                <p>
+                  {index + 861} - {ele}
+                </p>
               </div>
             );
           }

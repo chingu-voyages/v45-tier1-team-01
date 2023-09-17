@@ -18,6 +18,9 @@
   border: 0.1rem solid black;
   border-bottom: none;
   background-color: #555555;
-  width: max-content;
   margin: 0 0.2rem;
+}
+
+.histogram-wrapper{
+  margin-bottom: -60px;
 }

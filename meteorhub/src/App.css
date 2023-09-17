@@ -8,6 +8,7 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  background-color: rgb(16, 16, 19);
 }
 
 h1 {
