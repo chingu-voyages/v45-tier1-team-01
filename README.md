@@ -1,4 +1,4 @@
-# ☄️ Meteorhub
+# ☄️ MeteorHub
 
 ## Overview
 
