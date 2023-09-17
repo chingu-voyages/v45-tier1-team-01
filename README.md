@@ -61,8 +61,10 @@ Before starting, you need to install the following on your computer.
 <footer style="display: flex; justify-content: space-between; align-items: center">
    <div>
       <div>
-         <p>Designed by:</p>
+         <strong>Designed by :</strong>  <a target="_blank" href="https://github.com/CharanMN7" >Charan</a>, <a target="_blank" href="https://github.com/Sushants-Git">Sushant Mishra</a>, <a target="_blank" href="https://github.com/ashiyaman" class="circle">Ashiya Banu</a>,  <a target="_blank" href="https://github.com/itzmidinesh"
+            >Dinesh Anbazhagan</a>a
       </div>
+     <br />
       <div>
          <a target="_blank" href="https://github.com/CharanMN7" >
          <img
@@ -113,31 +115,30 @@ Before starting, you need to install the following on your computer.
          </a>
       </div>
    </div>
-   <div>
-      <a
-         href="https://www.chingu.io/"
-         target="_blank"
-         >
-         Made for Chingu Voyage 45 &copy; 2023
-         <svg style="fill: white;" width="18" height="18" viewBox="0 0 24 24">
-            <path d="M18.25 15.5a.75.75 0 0 0 .75-.75v-9a.75.75 0 0 0-.75-.75h-9a.75.75 0 0 0 0 1.5h7.19L6.22 16.72a.75.75 0 1 0 1.06 1.06L17.5 7.56v7.19c0 .414.336.75.75.75z"></path>
-         </svg>
-      </a>
-   </div>
-   <div>
+     <div>
       <div>
          <div>
-            A special thanks to Jim :
+            <strong>A special thanks to <a href="https://github.com/jdmedlock" target="_black">Jim</a> from Chingu: </strong>
          </div>
-         <div>
             <a href="https://github.com/jdmedlock" target="_black">
             <img src="https://avatars.githubusercontent.com/u/1287072?s=64&amp;v=4" alt="@jdmedlock" size="60" height="60" width="60" data-view-component="true" class="avatar circle"
                style="border-radius: 100%;">
             </a>
-         </div>
       </div>
    </div>
 </footer>
 
+## ✨ Acknowledgement
+   Thanks to NASA and it's partners for open sourcing this data. You can find more at [NASA Open Data Portal](https://data.nasa.gov/). 
 
+## ✨ About Chingu
+   <div> This project was made for :
+      <a
+         href="https://www.chingu.io/"
+         target="_blank"
+         >
+         Chingu Voyage 45 &copy; 2023
+      </a>
+   </div>
+If you aren’t yet a member of Chingu we invite you to join us. We help our members transform what they’ve learned in courses & tutorials into the practical experience employers need and want.
 
