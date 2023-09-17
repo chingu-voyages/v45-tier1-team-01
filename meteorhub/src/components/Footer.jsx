@@ -76,6 +76,7 @@ export default function Footer() {
         </a>
       </div>
       <div>
+        <p>GitHub Repo:</p>
         <a
           href="https://github.com/chingu-voyages/v45-tier1-team-01"
           target="_blank"
