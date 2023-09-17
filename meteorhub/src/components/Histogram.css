@@ -2,10 +2,22 @@
   overflow-y: hidden;
   display: flex;
   height: 27vh;
-  width: 35vw;
+  width: 32vw;
   border: 1px solid white;
   padding: 1rem;
   margin: 2rem auto !important;
   align-items: flex-end;
   padding: 1rem 1rem 4rem 1rem;
+}
+
+.by-year {
+  padding-bottom: 2rem;
+}
+
+.histogram-bar {
+  border: 0.1rem solid black;
+  border-bottom: none;
+  background-color: #555555;
+  width: max-content;
+  margin: 0 0.2rem;
 }

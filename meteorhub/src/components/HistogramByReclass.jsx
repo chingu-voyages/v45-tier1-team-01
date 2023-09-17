@@ -1,3 +1,5 @@
+import "./Histogram.css";
+
 export default function HistogramByReclass({ filteredData }) {
   const recclass = filteredData.map((ele) => ele.recclass);
   const dict = {};
@@ -23,13 +25,9 @@ export default function HistogramByReclass({ filteredData }) {
           return (
             <div key={ele[0]} style={{ borderBottom: "1px solid black" }}>
               <div
+                className="histogram-bar"
                 style={{
                   height: `${(200 * ele[1]) / max}px`,
-                  border: "2px solid black",
-                  borderBottom: "none",
-                  backgroundColor: "grey",
-                  width: "max-content",
-                  margin: "0 0.2rem",
                 }}
               >
                 <p style={{}}>

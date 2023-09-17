@@ -1,3 +1,5 @@
+import "./Histogram.css";
+
 export default function HistogramByYear({ filteredData }) {
   let arr = [];
   let max = 0;
@@ -24,20 +26,16 @@ export default function HistogramByYear({ filteredData }) {
   }
 
   return (
-    <div className="histogram">
+    <div className="histogram by-year">
       {!!arr &&
         arr.map((ele, index) => {
           if (ele > 0) {
             return (
               <div key={index + 861} style={{ borderBottom: "2px solid black" }}>
                 <div
+                  className="histogram-bar"
                   style={{
                     height: `${(200 * ele) / max}px`,
-                    border: "2px solid black",
-                    borderBottom: "none",
-                    backgroundColor: "grey",
-                    width: "max-content",
-                    margin: "0 0.2rem",
                   }}
                 >
                   <p>
