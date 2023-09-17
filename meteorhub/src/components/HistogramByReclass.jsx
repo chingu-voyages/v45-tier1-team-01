@@ -1,3 +1,5 @@
+import "./Histogram.css";
+
 export default function HistogramByReclass({ filteredData }) {
   const recclass = filteredData.map((ele) => ele.recclass);
   const dict = {};

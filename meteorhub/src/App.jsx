@@ -1,8 +1,8 @@
 import "./App.css";
-import React, { useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import SearchComponent from "./components/SearchComponent";
 import data from "./assets/data";
-import Footer from "./components/Footer"
+import Footer from "./components/Footer";
 
 function App() {
   const [query, setQuery] = useState("");
@@ -11,9 +11,9 @@ function App() {
   const [maxMass, setMaxMass] = useState(0);
   const [initialRange, setInitialRange] = useState({
     minRange: 0,
-    maxRange: 0
-  })
-  
+    maxRange: 0,
+  });
+
   function onChangeHandler(e) {
     setQuery(e.target.value);
   }
@@ -26,33 +26,36 @@ function App() {
   function updateInitialRange(minValue, maxValue) {
     setInitialRange({
       minRange: minValue,
-      maxRange: maxValue
-    })
+      maxRange: maxValue,
+    });
   }
 
   function resetFilter() {
     setMinMass(initialRange.minRange);
-    setMaxMass(initialRange.maxRange)
+    setMaxMass(initialRange.maxRange);
   }
 
   useEffect(() => {
     const minInitialMass = data.reduce((prev, curr) => {
-      return parseInt(curr?.mass) < parseInt(prev.mass) ? curr : prev}). mass;
+      return parseInt(curr?.mass) < parseInt(prev.mass) ? curr : prev;
+    }).mass;
     const maxInitialMass = data.reduce((prev, curr) => {
-      return parseInt(prev?.mass) > parseInt(curr.mass) ? prev : curr}). mass;
+      return parseInt(prev?.mass) > parseInt(curr.mass) ? prev : curr;
+    }).mass;
     setMinMass(parseInt(minInitialMass));
     setMaxMass(parseInt(maxInitialMass));
     updateInitialRange(minInitialMass, maxInitialMass);
-  },[])
+  }, []);
 
-  useEffect(() => {  
+  useEffect(() => {
     const trimmedQuery = query.trim();
     const filteredResults = data.filter(
       (item) =>
-        (parseInt(item.mass) >= minMass && parseInt(item.mass) <= maxMass) &&
+        parseInt(item.mass) >= minMass &&
+        parseInt(item.mass) <= maxMass &&
         (item.name.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
-        item.year.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
-        item.recclass.toLowerCase().includes(trimmedQuery.toLowerCase()))
+          item.year.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
+          item.recclass.toLowerCase().includes(trimmedQuery.toLowerCase()))
     );
     setFilteredData(filteredResults);
   }, [data, minMass, maxMass, query]);
@@ -68,7 +71,6 @@ function App() {
         maxMass={maxMass}
         resetFilter={resetFilter}
       />
-      <Footer />
     </>
   );
 }

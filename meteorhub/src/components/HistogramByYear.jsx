@@ -1,3 +1,5 @@
+import "./Histogram.css";
+
 export default function HistogramByYear({ filteredData }) {
   let arr = [];
   let max = 0;
@@ -24,7 +26,7 @@ export default function HistogramByYear({ filteredData }) {
   }
 
   return (
-    <div className="histogram">
+    <div className="histogram by-year">
       {!!arr &&
         arr.map((ele, index) => {
           if (ele > 0) {

@@ -1,19 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Montserrat:wght@400;500&display=swap");
+
+/* Almighty main tag */
+
+main {
+  max-width: 55vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+h1 {
+  font-family: "Chakra Petch";
+  font-size: 5rem !important;
+}
+
+/* Search */
 #search-wrapper {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin: 2em 0em;
+  margin: 2em auto;
 }
 
 #searchbar {
   height: 2.5em;
   border-radius: 5px;
   text-align: center;
-  width: 30em;
+  min-width: 20em;
 }
+
+/* Data Display */
 
 #data-display-table {
   border: 1px solid whitesmoke;
+  width: 50vw;
 }
 
 .button {
@@ -26,8 +47,8 @@
   background: #f9f9f9;
   border-radius: 5px;
   display: flex;
-  height: 2.5em;  
-  padding: 0em 1em; 
+  height: 2.5em;
+  padding: 0em 1em;
 }
 
 #selectedRangeTag p {
@@ -35,15 +56,15 @@
 }
 
 #selectedRangeTag button {
-    background: silver;
-    border-radius: 50%;
-    color: white;
-    display: inline-block; 
-    margin-left: 1em;
-    padding: revert;    
+  background: silver;
+  border-radius: 50%;
+  color: white;
+  display: inline-block;
+  margin-left: 1em;
+  padding: revert;
 }
 
-.popup {  
+.popup {
   align-items: center;
   background-color: #3b3a3a;
   display: flex;
@@ -54,7 +75,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 2;  
+  z-index: 2;
 }
 
 .popup-inner {
@@ -63,15 +84,15 @@
   display: flex;
   flex-direction: row;
   height: 30vh;
-  position: relative;  
-  width: 50vw;  
+  position: relative;
+  width: 50vw;
 }
 
 .range-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  margin: auto;  
+  margin: auto;
   width: 100%;
 }
 
@@ -79,7 +100,7 @@
   padding: 2em;
 }
 
-input[type="number"] {  
+input[type="number"] {
   background-color: transparent;
   border-radius: 5px;
   cursor: pointer;
@@ -92,8 +113,8 @@ input[type="number"] {
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 .apply-btn {
@@ -105,9 +126,9 @@ input::-webkit-inner-spin-button {
   background: #111;
   border: none;
   border-radius: 10px;
-  color: #fff;  
-  cursor: pointer;  
-  position: absolute;  
+  color: #fff;
+  cursor: pointer;
+  position: absolute;
   right: 15px;
   top: 10px;
   z-index: 0;
@@ -115,24 +136,35 @@ input::-webkit-inner-spin-button {
 
 .close-btn:before {
   animation: glowing 20s linear infinite;
-  content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
   position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
 }
 
 .close-btn:after {
   z-index: -1;
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -151,7 +183,13 @@ input::-webkit-inner-spin-button {
 }
 
 @keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }

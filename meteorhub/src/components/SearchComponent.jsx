@@ -5,6 +5,8 @@ import SummaryMetric from "./SummaryMetric";
 import DataDisplayTable from "./DataDisplayTable";
 import FilterRangeComponent from "./FilterRangeComponent";
 import FilterTag from "./FilterTag";
+import HistogramByReclass from "./HistogramByReclass";
+import HistogramByYear from "./HistogramByYear";
 
 export default function SearchComponent({
   query,
@@ -17,6 +19,7 @@ export default function SearchComponent({
 }) {
   const [openFilterModal, setOpenFilterModal] = useState(false);
   const [showRangeTag, setShowRangeTag] = useState(false);
+  const vwHeight = "50vw";
 
   function toggleFilterModal() {
     setOpenFilterModal(!openFilterModal);
@@ -74,12 +77,85 @@ export default function SearchComponent({
           ) : null}
         </div>
         <div id="data-display-table">
-          <FixedSizeList height={360} itemCount={filteredData.length} itemSize={100}>
+          <FixedSizeList
+            height={window.innerHeight * 0.5}
+            itemCount={filteredData.length}
+            itemSize={100}
+          >
             {Row}
           </FixedSizeList>
         </div>
+
+        <SummaryMetric filteredData={filteredData} />
       </main>
-      <SummaryMetric filteredData={filteredData} />
+      <aside>
+        <HistogramByYear filteredData={filteredData} />
+        <HistogramByReclass filteredData={filteredData} />
+      </aside>
     </>
   );
 }
+
+// import React from 'react';
+// import { FixedSizeList } from 'react-window';
+
+// const MyComponent = () => {
+//   const vwHeight = '50vw'; // Set the height as a string with 'vw' unit
+
+//   return (
+//     <FixedSizeList
+//       height={vwHeight}
+//       itemCount={100}
+//       itemSize={50}
+//       width={300}
+//     >
+//       {({ index, style }) => (
+//         <div style={style}>Item {index}</div>
+//       )}
+//     </FixedSizeList>
+//   );
+// };
+
+// export default MyComponent;
+
+// import React, { useEffect, useState } from 'react';
+// import { FixedSizeList } from 'react-window';
+
+// const MyComponent = () => {
+//   const [vwHeight, setVwHeight] = useState(0);
+
+//   useEffect(() => {
+//     // Calculate the height based on viewport width (e.g., 50% of viewport width)
+//     const calculatedHeight = window.innerWidth * 0.5;
+//     setVwHeight(calculatedHeight);
+
+//     // Update the height when the window is resized
+//     const handleResize = () => {
+//       const newHeight = window.innerWidth * 0.5;
+//       setVwHeight(newHeight);
+//     };
+
+//     // Attach the event listener for window resize
+//     window.addEventListener('resize', handleResize);
+
+//     // Remove the event listener when the component unmounts
+//     return () => {
+//       window.removeEventListener('resize', handleResize);
+//     };
+//   }, []);
+
+//   return (
+//     <FixedSizeList
+//       height={vwHeight}
+//       itemCount={100}
+//       itemSize={50}
+//       width={300}
+//     >
+//       {({ index, style }) => (
+//         <div style={style}>Item {index}</div>
+//       )}
+//     </FixedSizeList>
+//   );
+// };
+
+// export default MyComponent;

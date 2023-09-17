@@ -25,6 +25,10 @@
 .meteor-name {
   font-size: 2rem;
   font-weight: bold;
+  width: 11rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .meteor-recclass {
   font-size: 1.5rem;
