@@ -9,21 +9,21 @@ export default function Footer() {
           <p>Designed by:</p>
         </div>
         <div className="img-wrapper">
-          <a target="_blank" href="https://github.com/CharanMN7" class="circle">
+          <a target="_blank" href="https://github.com/CharanMN7" className="circle">
             <img
               src="https://avatars.githubusercontent.com/u/103265133?s=64&amp;v=4"
               alt="@CharanMN7"
               size="60"
               height="60"
               width="60"
-              class="avatar circle"
+              className="avatar circle"
               title="Charan"
             />
           </a>
           <a
             target="_blank"
             href="https://github.com/Sushants-Git"
-            class="circle"
+            className="circle"
           >
             <img
               src="https://avatars.githubusercontent.com/u/100516354?s=64&amp;v=4"
@@ -31,25 +31,25 @@ export default function Footer() {
               size="60"
               height="60"
               width="60"
-              class="avatar circle"
+              className="avatar circle"
               title="Sushant Mishra"
             />
           </a>
-          <a target="_blank" href="https://github.com/ashiyaman" class="circle">
+          <a target="_blank" href="https://github.com/ashiyaman" className="circle">
             <img
               src="https://avatars.githubusercontent.com/u/14231344?s=64&amp;v=4"
               alt="@ashiyaman"
               size="60"
               height="60"
               width="60"
-              class="avatar circle"
+              className="avatar circle"
               title="Ashiya Banu"
             />
           </a>
           <a
             target="_blank"
             href="https://github.com/itzmidinesh"
-            class="circle"
+            className="circle"
           >
             <img
               src="https://avatars.githubusercontent.com/u/5523347?s=64&amp;v=4"
@@ -57,7 +57,7 @@ export default function Footer() {
               size="60"
               height="60"
               width="60"
-              class="avatar circle"
+              className="avatar circle"
               title="Dinesh Anbazhagan"
             />
           </a>
