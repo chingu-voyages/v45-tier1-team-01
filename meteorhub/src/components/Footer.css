@@ -1,0 +1,34 @@
+.circle {
+  border-radius: 100%;
+}
+
+.img-wrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid white;
+  width: 90vw;
+}
+
+.link-to-chingu {
+  text-decoration: none;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  display: flex;
+}
+
+.link-to-chingu svg path{
+    fill: white;
+}
+
+.footer-left{
+    display: flex;
+}

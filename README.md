@@ -33,13 +33,12 @@ Before starting, you need to install the following on your computer.
 
 **Note**: Instead of fetching the data from [NASA Meteor landing API](https://data.nasa.gov/resource/gh4g-9sfh.json), we created a file `data.js` in `src/assets/data.js` which contains all the fetched data. Since, at the time of making this project the data pulled from the API is static and not changing.
 
-
 - The search field lets the user search data on the bases of:
 
-    - Name
-    - Year of strike
-    - Meteorite composition (`recclass`)
-    - Mass range (e.g. low to high, inclusive)
+  - Name
+  - Year of strike
+  - Meteorite composition (`recclass`)
+  - Mass range (e.g. low to high, inclusive)
 
 - Clicking on the clear button will clear the input field as well as update the DOM to show all the meteor landings.
 
@@ -50,14 +49,95 @@ Before starting, you need to install the following on your computer.
 
 - All the data is summarized in the Summary Metric. Summary Metric displays the following metrics for the data that has been selected:
 
-    - Total number of strikes
-    - Average mass
-    - Histogram showing the number of strikes by year
-    - Histogram showing the number of strikes by meteorite composition (`recclass`).
+  - Total number of strikes
+  - Average mass
+  - Histogram showing the number of strikes by year
+  - Histogram showing the number of strikes by meteorite composition (`recclass`).
 
- ( **If no search criteria have been selected then the summary metrics will be for all meteorite strikes.** )
- 
+( **If no search criteria have been selected then the summary metrics will be for all meteorite strikes.** )
 
 ## ✨ All the awesome contributors
 
-<img src="https://contrib.rocks/image?repo=chingu-voyages/v45-tier1-team-01"/>
+<footer style="display: flex; justify-content: space-between; align-items: center">
+   <div>
+      <div>
+         <p>Designed by:</p>
+      </div>
+      <div>
+         <a target="_blank" href="https://github.com/CharanMN7" >
+         <img
+            src="https://avatars.githubusercontent.com/u/103265133?s=64&amp;v=4"
+            alt="@CharanMN7"
+            size="60"
+            height="60"
+            width="60"
+            style="border-radius: 100%;"
+            />
+         </a>
+         <a
+            target="_blank"
+            href="https://github.com/Sushants-Git"
+            >
+         <img
+            src="https://avatars.githubusercontent.com/u/100516354?s=64&amp;v=4"
+            alt="@Sushants-Git"
+            size="60"
+            height="60"
+            width="60"
+            style="border-radius: 100%;"
+            />
+         </a>
+         <a target="_blank" href="https://github.com/ashiyaman" class="circle">
+         <img
+            src="https://avatars.githubusercontent.com/u/14231344?s=64&amp;v=4"
+            alt="@ashiyaman"
+            size="60"
+            height="60"
+            width="60"
+            style="border-radius: 100%;"
+            />
+         </a>
+         <a
+            target="_blank"
+            href="https://github.com/itzmidinesh"
+            class="circle"
+            >
+         <img
+            src="https://avatars.githubusercontent.com/u/5523347?s=64&amp;v=4"
+            alt="@itzmidinesh"
+            size="60"
+            height="60"
+            width="60"
+            style="border-radius: 100%;"
+            />
+         </a>
+      </div>
+   </div>
+   <div>
+      <a
+         href="https://www.chingu.io/"
+         target="_blank"
+         >
+         Made for Chingu Voyage 45 &copy; 2023
+         <svg style="fill: white;" width="18" height="18" viewBox="0 0 24 24">
+            <path d="M18.25 15.5a.75.75 0 0 0 .75-.75v-9a.75.75 0 0 0-.75-.75h-9a.75.75 0 0 0 0 1.5h7.19L6.22 16.72a.75.75 0 1 0 1.06 1.06L17.5 7.56v7.19c0 .414.336.75.75.75z"></path>
+         </svg>
+      </a>
+   </div>
+   <div>
+      <div>
+         <div>
+            A special thanks to Jim :
+         </div>
+         <div>
+            <a href="https://github.com/jdmedlock" target="_black">
+            <img src="https://avatars.githubusercontent.com/u/1287072?s=64&amp;v=4" alt="@jdmedlock" size="60" height="60" width="60" data-view-component="true" class="avatar circle"
+               style="border-radius: 100%;">
+            </a>
+         </div>
+      </div>
+   </div>
+</footer>
+
+
+
