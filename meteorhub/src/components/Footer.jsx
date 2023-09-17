@@ -17,6 +17,7 @@ export default function Footer() {
               height="60"
               width="60"
               class="avatar circle"
+              title="Charan"
             />
           </a>
           <a
@@ -31,6 +32,7 @@ export default function Footer() {
               height="60"
               width="60"
               class="avatar circle"
+              title="Sushant Mishra"
             />
           </a>
           <a target="_blank" href="https://github.com/ashiyaman" class="circle">
@@ -41,6 +43,7 @@ export default function Footer() {
               height="60"
               width="60"
               class="avatar circle"
+              title="Ashiya Banu"
             />
           </a>
           <a
@@ -55,6 +58,7 @@ export default function Footer() {
               height="60"
               width="60"
               class="avatar circle"
+              title="Dinesh Anbazhagan"
             />
           </a>
         </div>
