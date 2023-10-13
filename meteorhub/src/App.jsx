@@ -19,8 +19,8 @@ function App() {
   }
 
   function updateRange(minValue, maxValue) {
-    minValue === "" ? minMass : setMinMass(parseInt(minValue));
-    maxValue === "" ? maxMass : setMaxMass(parseInt(maxValue));
+    minValue === "" ? minMass : setMinMass(parseFloat(minValue));
+    maxValue === "" ? maxMass : setMaxMass(parseFloat(maxValue));
   }
 
   function updateInitialRange(minValue, maxValue) {
@@ -37,31 +37,28 @@ function App() {
 
   useEffect(() => {
     const minInitialMass = data.reduce((prev, curr) => {
-      return parseInt(curr?.mass) < parseInt(prev.mass) ? curr : prev;
+      return parseFloat(curr?.mass) < parseFloat(prev.mass) ? curr : prev;
     }).mass;
     const maxInitialMass = data.reduce((prev, curr) => {
-      return parseInt(prev?.mass) > parseInt(curr.mass) ? prev : curr;
+      return parseFloat(prev?.mass) > parseFloat(curr.mass) ? prev : curr;
     }).mass;
-    setMinMass(parseInt(minInitialMass));
-    setMaxMass(parseInt(maxInitialMass));
+    setMinMass(parseFloat(minInitialMass));
+    setMaxMass(parseFloat(maxInitialMass));
     updateInitialRange(minInitialMass, maxInitialMass);
   }, []);
 
   useEffect(() => {
     const trimmedQuery = query.trim();
-    if (trimmedQuery===""){
-      setFilteredData(data);
-    } else{
-      const filteredResults = data.filter(
-        (item) =>
-          parseInt(item.mass) >= minMass &&
-          parseInt(item.mass) <= maxMass &&
-          (item.name.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
-            item.year.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
-            item.recclass.toLowerCase().includes(trimmedQuery.toLowerCase()))
-      );
-      setFilteredData(filteredResults);
-    }
+    const filteredResults = data.filter(
+      (item) =>
+        parseFloat(item.mass) >= minMass &&
+        parseFloat(item.mass) <= maxMass &&
+        (item.name.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
+          item.year.toLowerCase().includes(trimmedQuery.toLowerCase()) ||
+          item.recclass.toLowerCase().includes(trimmedQuery.toLowerCase()))
+    );
+    setFilteredData(filteredResults);
+
   }, [data, minMass, maxMass, query]);
 
   return (
