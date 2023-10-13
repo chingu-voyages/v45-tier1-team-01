@@ -1,6 +1,5 @@
 .summaryMetric {
   border: 1px solid whitesmoke;
-  width: max-content;
   margin: 1rem 1rem 1rem 0;
   display: flex;
   flex-wrap: wrap;

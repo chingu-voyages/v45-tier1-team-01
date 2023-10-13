@@ -79,6 +79,41 @@ button:focus-visible {
 
 @media (max-width: 892px) {
   #root {
-    color: red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  main {
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    min-width: min-content;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+  }
+
+  .summaryMetric,
+  #data-display-table {
+    width: 100vw !important;
+  }
+
+  .summaryMetric {
+    margin: 1rem;
+  }
+
+  aside {
+    display: flex;
+    max-width: 100vw;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .histogram {
+    width: 100vw;
+    margin: 1rem 3rem;
   }
 }

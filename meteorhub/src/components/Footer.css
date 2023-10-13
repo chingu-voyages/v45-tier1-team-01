@@ -4,7 +4,7 @@
 
 .img-wrapper {
   display: flex;
-  gap: 10px;
+  gap: 0.8rem;
 }
 
 .footer {
@@ -12,8 +12,13 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  align-items: last baseline;
   border-top: 1px solid white;
   width: 90vw;
+}
+
+#github-logo {
+  padding-bottom: 0.3rem;
 }
 
 .link-to-chingu {
@@ -25,10 +30,10 @@
   display: flex;
 }
 
-.link-to-chingu svg path{
-    fill: white;
+.link-to-chingu svg path {
+  fill: white;
 }
 
-.footer-left{
-    display: flex;
+.footer-left {
+  display: flex;
 }
