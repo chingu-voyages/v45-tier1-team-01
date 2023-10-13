@@ -79,16 +79,3 @@ export default function Footer() {
     </>
   );
 }
-
-{
-  /*
-<div>
-        <a href="https://www.chingu.io/" className="link-to-chingu" target="_blank">
-          Made for Chingu Voyage 45 &copy; 2023
-          <svg width="18" height="18" viewBox="0 0 24 24">
-            <path d="M18.25 15.5a.75.75 0 0 0 .75-.75v-9a.75.75 0 0 0-.75-.75h-9a.75.75 0 0 0 0 1.5h7.19L6.22 16.72a.75.75 0 1 0 1.06 1.06L17.5 7.56v7.19c0 .414.336.75.75.75z"></path>
-          </svg>
-        </a>
-      </div>
-*/
-}
