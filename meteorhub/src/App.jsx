@@ -58,6 +58,7 @@ function App() {
           item.recclass.toLowerCase().includes(trimmedQuery.toLowerCase()))
     );
     setFilteredData(filteredResults);
+
   }, [data, minMass, maxMass, query]);
 
   return (
