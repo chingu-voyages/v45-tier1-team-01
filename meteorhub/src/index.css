@@ -28,8 +28,6 @@ body {
   margin: 0;
   display: flex;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
 }
 
 h1 {
@@ -79,6 +77,54 @@ button:focus-visible {
 
 @media (max-width: 892px) {
   #root {
-    color: red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 1rem;
+    width: 90vw;
+  }
+
+  main {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    min-width: min-content;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    margin: 1rem 0;
+  }
+
+  #search-wrapper {
+    margin: 1rem 0;
+  }
+
+  .summaryMetric,
+  #data-display-table {
+    width: 100% !important;
+  }
+
+  .summaryMetric {
+    margin: 1rem 0rem;
+  }
+
+  aside {
+    display: flex;
+    max-width: 100%;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .histogram {
+    width: 100%;
+    margin: 1rem 0rem;
+  }
+}
+
+@media (min-width: 814px) {
+  #search-wrapper {
+    padding-left: 1.5rem;
   }
 }

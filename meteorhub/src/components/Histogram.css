@@ -4,10 +4,9 @@
   height: 27vh;
   width: 32vw;
   border: 1px solid white;
-  padding: 1rem;
-  margin: 2rem auto !important;
+  margin: 2rem auto;
   align-items: flex-end;
-  padding: 1rem 1rem 4rem 1rem;
+  padding: 1rem 0rem 4rem 0rem;
 }
 
 .by-year {
@@ -21,6 +20,6 @@
   margin: 0 0.2rem;
 }
 
-.histogram-wrapper{
+.histogram-wrapper {
   margin-bottom: -60px;
 }

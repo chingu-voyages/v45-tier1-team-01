@@ -5,8 +5,7 @@ export default function HistogramByReclass({ filteredData }) {
   const dict = {};
 
   for (let i = 0; i < recclass.length; i++) {
-    dict[recclass[i]] =
-      dict[recclass[i]] === undefined ? 1 : dict[recclass[i]] + 1;
+    dict[recclass[i]] = dict[recclass[i]] === undefined ? 1 : dict[recclass[i]] + 1;
   }
 
   const ansArr = Object.entries(dict);
@@ -33,7 +32,8 @@ export default function HistogramByReclass({ filteredData }) {
               ></div>
               <p style={{ width: "90px" }}>
                 {ele[0]} - {ele[1]}
-              </p>&nbsp;
+              </p>
+              &nbsp;
             </div>
           );
         })}
